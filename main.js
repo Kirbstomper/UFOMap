@@ -9,7 +9,7 @@ var request = require('superagent');
       // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
       'mapsApiKey': 'AIzaSyDBU4eMBD02OnA8bu0iIn4HZFE__DEW3gE'
     });
-    //google.charts.setOnLoadCallback(drawMapAdress);
+    //google.charts.setOnLoadCallback(drawSearchMap("UNCC"));
   
 
     //Handles adding and searching for points
@@ -57,7 +57,7 @@ var request = require('superagent');
                     if(x.lat != tempLat ||x.long != tempLong){
                       //Remove date rows from above
                       if(sap > 1){
-                      data.removeRows(total-sap,sap);
+                      data.removeRows(total-sap,sap-1);
                       total = total-sap;
                       }
                       sap = 0;
