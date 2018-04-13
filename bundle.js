@@ -94,6 +94,7 @@ var request = require('superagent');
                     data.addRows([[a.Latitude,a.Longitude*(-1),a.locationID,'airport']]);
                    
                   }
+                  console.log(data.getNumberOfRows());
                   map.draw(data, {
                     showTooltip: true,
                     showInfoWindow: true,
@@ -117,7 +118,7 @@ var request = require('superagent');
               
                 }
                 
-                console.log(data);
+               // console.log(data);
                 
             
                 });
